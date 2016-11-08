@@ -9,7 +9,7 @@
 #include <QWidget>
 #include "global.h"
 #include "scriptline.h"
-#include "speechboxlabel.h"
+#include "dialogboxlabel.h"
 
 class DialogBox : public QTextEdit
 {

@@ -6,8 +6,8 @@
 #include "global.h"
 #include "player.h"
 #include "unit.h"
-#include "speechbox.h"
-#include "speechboxlabel.h"
+#include "dialogbox.h"
+#include "dialogboxlabel.h"
 
 /** NOTE: This is the class used to contain objects and other variables that should be accessible to all classes in the game */
 

@@ -10,8 +10,8 @@
 #include <QPixmap>
 #include "global.h"
 #include "script.h"
-#include "speechbox.h"
-#include "speechboxlabel.h"
+#include "dialogbox.h"
+#include "dialogboxlabel.h"
 #include "unitimage.h"
 
 #define EXAMPLE_BATTLEFIELD_BACKGROUND "C:\\Users\\Kathy\\Documents\\RPG\\res\\img\\background\\battle\\exampleBattlefield.png"

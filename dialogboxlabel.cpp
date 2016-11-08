@@ -5,7 +5,7 @@
 #include <QString>
 #include <QLabel>
 #include "global.h"
-#include "speechboxlabel.h"
+#include "dialogboxlabel.h"
 
 DialogBoxLabel::DialogBoxLabel(Global &g) : QLabel(g.mainW) {
     this->setText(QString::fromStdString(""));

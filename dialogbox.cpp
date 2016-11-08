@@ -5,7 +5,7 @@
 #include <QString>
 #include <QMouseEvent>
 #include "global.h"
-#include "speechbox.h"
+#include "dialogbox.h"
 
 DialogBox::DialogBox(Global &g) : QTextEdit() {
     this->setReadOnly(true);
