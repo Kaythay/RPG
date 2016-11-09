@@ -2,6 +2,7 @@
 #include <string>
 #include <QObject>
 #include <QWidget>
+#include <QMouseEvent>
 #include <QGraphicsScene>
 #include <QGraphicsView>
 #include <QGraphicsPixmapItem>
@@ -22,10 +23,14 @@ UnitImage::UnitImage(DialogConstants::sideOfScreen side, Global &g) : QWidget(g.
     this->view  = new QGraphicsView(this->scene, this->g->mainW);
     this->view->setFrameStyle(QFrame::NoFrame);
     this->mapItem = new QGraphicsPixmapItem();
-    this->map = new QPixmap(BLANK_IMAGE_PATH);
-    this->map->setMask(this->map->createMaskFromColor(QColor(0, 255, 0)));
-
     this->hide();
+}
+
+
+void UnitImage::mouseReleaseEvent(QMouseEvent *event){
+    event->ignore();
+    std::cout << "here uuu" << std::endl;
+    return;
 }
 
 bool UnitImage::update(std::string n, std::string e){
@@ -35,20 +40,16 @@ bool UnitImage::update(std::string n, std::string e){
     s.append(e);
     s.append(".png");
 
-    this->scene->removeItem(this->mapItem);
-    this->map->swap(QPixmap(QString::fromStdString(s)));
-    this->mapItem->setPixmap(*this->map);
+    QPixmap map(QString::fromStdString(s));
+    this->mapItem->setPixmap(map);
     this->scene->addItem(this->mapItem);
     this->view->show();
-    this->view->lower();
     return true;
 }
 
 bool UnitImage::clear(){
-
-    this->scene->removeItem(this->mapItem);
-    this->map->swap(QPixmap(BLANK_IMAGE_PATH));
-    this->mapItem->setPixmap(*this->map);
+    QPixmap map(QString::fromStdString(BLANK_IMAGE_PATH));
+    this->mapItem->setPixmap(map);
     this->scene->addItem(this->mapItem);
     this->view->show();
     return true;

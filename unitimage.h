@@ -16,7 +16,7 @@ class UnitImage : public QWidget
     Q_OBJECT
 public:
     explicit UnitImage(DialogConstants::sideOfScreen side, Global &g);
-
+    void mouseReleaseEvent(QMouseEvent *event);
     bool update(std::string n, std::string e);
     bool clear();
 
@@ -27,7 +27,6 @@ protected:
     QGraphicsScene * scene;
     QGraphicsView * view;
     QGraphicsPixmapItem * mapItem;
-    QPixmap * map;
     DialogConstants::sideOfScreen side;
 
 signals:

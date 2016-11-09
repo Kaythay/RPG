@@ -29,23 +29,18 @@ Screen::Screen(std::string backgrndPath, std::string scrptPath, Global &g) : QWi
     this->backgrndView->show();
 
     this->box = new DialogBox(*this->g);
-    this->box->setParent(this);
-    this->unitImg = new UnitImage(DialogConstants::LEFT, g);
+    this->unitImg = new UnitImage(DialogConstants::LEFT, *this->g);
 
     this->busy = false;
 }
 
 void Screen::mouseReleaseEvent(QMouseEvent *event){
     event->accept();
-
     //if the screen is not busy, update the gui
     //otherwse, do nothing
     if (!this->busy){
         this->updateFrame();
     }
-
-
-
     return;
 }
 
@@ -55,7 +50,7 @@ bool Screen::updateFrame(){
     Dialog * sl;
 
     //get the next line from the script and store it in sl
-    //if there are no more lines left, the method will returna false
+    //if there are no more lines left, the method will return a false
     if (this->script->getNextLine(sl)){
 
         //update unit image
@@ -67,8 +62,9 @@ bool Screen::updateFrame(){
         this->busy = false;
         return true;
     } else {
-        //script is done
+        //script is done, can hide the dialog box and unit images
         this->busy = false;
+        this->box->remove();
         return false;
     }
 }
