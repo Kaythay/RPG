@@ -14,9 +14,9 @@
 #include "dialogboxlabel.h"
 #include "unitimage.h"
 
-#define EXAMPLE_BATTLEFIELD_BACKGROUND "C:\\Users\\Kathy\\Documents\\RPG\\res\\img\\background\\battle\\exampleBattlefield.png"
-#define EXAMPLE_BACKGROUND             "C:\\Users\\Kathy\\Documents\\RPG\\res\\img\\background\\cutscene\\exampleBackground.png"
-#define EXAMPLE_SCRIPT                 "C:\\Users\\Kathy\\Documents\\RPG\\res\\script\\cutscene\\exampleScript.txt"
+#define EXAMPLE_BATTLEFIELD_BACKGROUND "C:\\Users\\Kathy\\Desktop\\RPG\\res\\img\\background\\battle\\exampleBattlefield.png"
+#define EXAMPLE_BACKGROUND             "C:\\Users\\Kathy\\Desktop\\RPG\\res\\img\\background\\cutscene\\exampleBackground.png"
+#define EXAMPLE_SCRIPT                 "C:\\Users\\Kathy\\Desktop\\RPG\\res\\script\\cutscene\\exampleScript.txt"
 #define SCREEN_Y 450
 #define SCREEN_X 600
 
