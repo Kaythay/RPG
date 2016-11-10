@@ -12,8 +12,8 @@
 #include "scriptline.h"
 #include "unitimage.h"
 
-#define UNIT_IMAGE_PATH "C:\\Users\\Kathy\\Documents\\RPG\\res\\img\\unit\\"
-#define BLANK_IMAGE_PATH "C:\\Users\\Kathy\\Documents\\RPG\\res\\img\\blank.png"
+#define UNIT_IMAGE_PATH "C:\\Users\\Kathy\\Desktop\\RPG\\res\\img\\unit\\"
+#define BLANK_IMAGE_PATH "C:\\Users\\Kathy\\Desktop\\RPG\\res\\img\\blank.png"
 
 UnitImage::UnitImage(DialogConstants::sideOfScreen side, Global &g) : QWidget(g.mainW){
     this->g = &g;
@@ -22,7 +22,10 @@ UnitImage::UnitImage(DialogConstants::sideOfScreen side, Global &g) : QWidget(g.
     this->scene = new QGraphicsScene(this->g->mainW);
     this->view  = new QGraphicsView(this->scene, this->g->mainW);
     this->view->setFrameStyle(QFrame::NoFrame);
+    this->view->setStyleSheet(QString("background-color: transparent;"));
     this->mapItem = new QGraphicsPixmapItem();
+    this->setStyleSheet("background-color: transparent;");
+
     this->hide();
 }
 
@@ -39,6 +42,8 @@ bool UnitImage::update(std::string n, std::string e){
     s.append("\\");
     s.append(e);
     s.append(".png");
+
+    std::cout << s << std::endl;
 
     QPixmap map(QString::fromStdString(s));
     this->mapItem->setPixmap(map);
