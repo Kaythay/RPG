@@ -4,14 +4,16 @@
 #include <QObject>
 #include <QWidget>
 #include "player.h"
+#include "glass.h"
+#include "screen.h"
 
 class Global : public QObject
 {
     Q_OBJECT
 public:
     explicit Global(QObject *parent = 0);
-    Player * player;
-    QWidget * mainW;
+    static Player * player;
+    static Glass * mainW;
 
 signals:
 
