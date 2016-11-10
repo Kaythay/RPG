@@ -7,7 +7,7 @@
 #include "forestscreen.h"
 #include "player.h"
 
-PlayerCreateScreen::PlayerCreateScreen(Global &g) : Screen(EXAMPLE_BACKGROUND, EXAMPLE_SCRIPT, g), ui(new Ui::PlayerCreateScreen) {
+PlayerCreateScreen::PlayerCreateScreen() : Screen(EXAMPLE_BACKGROUND, EXAMPLE_SCRIPT), ui(new Ui::PlayerCreateScreen) {
     ui->setupUi(this);
 
     //don't react to user input except for the connections listed below, and events created by Qt Designer
@@ -39,8 +39,7 @@ void PlayerCreateScreen::done() {
     gB = this->isGenderValid();
 
     if (nB && gB){
-        this->g->player = new Player(this->n, this->gen);
-        ForestScreen * next = new ForestScreen(*(this->g));
+        ForestScreen * next = new ForestScreen();
         next->show();
 
         delete this;

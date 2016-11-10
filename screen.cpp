@@ -3,7 +3,6 @@
 #include <QObject>
 #include <QWidget>
 #include <QString>
-#include <QMouseEvent>
 #include <QGraphicsScene>
 #include <QGraphicsView>
 #include <QGraphicsPixmapItem>
@@ -13,35 +12,24 @@
 #include "script.h"
 #include "unitimage.h"
 
-Screen::Screen(std::string backgrndPath, std::string scrptPath, Global &g) : QWidget(g.mainW){
+Screen::Screen(std::string backgrndPath, std::string scrptPath) : QWidget(){
     this->busy = true;
 
-    this->g = &g;
     this->script = new Script(scrptPath);
     this->resize(SCREEN_X, SCREEN_Y);
 
     //set up properties needed for showing the background
-    this->backgrndScene = new QGraphicsScene(this->g->mainW);
-    this->backgrndView  = new QGraphicsView(this->backgrndScene, this->g->mainW);
+    this->backgrndScene = new QGraphicsScene();
+    this->backgrndView  = new QGraphicsView(this->backgrndScene);
     this->backgrndMap   = new QGraphicsPixmapItem(QPixmap(QString::fromStdString(backgrndPath)));
     this->backgrndScene->addItem(this->backgrndMap);
     this->backgrndView->lower();
     this->backgrndView->show();
 
-    this->box = new DialogBox(*this->g);
-    this->unitImg = new UnitImage(DialogConstants::LEFT, *this->g);
+    this->box = new DialogBox();
+    this->unitImg = new UnitImage(DialogConstants::LEFT);
 
     this->busy = false;
-}
-
-void Screen::mouseReleaseEvent(QMouseEvent *event){
-    event->accept();
-    //if the screen is not busy, update the gui
-    //otherwse, do nothing
-    if (!this->busy){
-        this->updateFrame();
-    }
-    return;
 }
 
 bool Screen::updateFrame(){

@@ -20,7 +20,7 @@ int main(int argc, char **argv)
 
 
     //set up start Screen
-    StartScreen * start = new StartScreen(*global);
+    StartScreen * start = new StartScreen();
     start->show();
 
     return app.exec();

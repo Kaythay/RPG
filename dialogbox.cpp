@@ -9,13 +9,13 @@
 #include "global.h"
 #include "dialogbox.h"
 
-DialogBox::DialogBox(Global &g) : QTextEdit(g.mainW) {
+DialogBox::DialogBox() : QTextEdit() {
     this->setReadOnly(true);
     this->setGeometry(0,300,600,150);
     this->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     this->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 
-    this->label = new DialogBoxLabel(g);
+    this->label = new DialogBoxLabel();
 
     this->hide();
     this->label->hide();

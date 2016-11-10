@@ -10,7 +10,7 @@
 class DialogBoxLabel : public QLabel
 {
 public:
-    DialogBoxLabel(Global &g);
+    DialogBoxLabel();
 };
 
 #endif // SPEECHBOXLABEL_H

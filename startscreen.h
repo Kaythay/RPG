@@ -15,7 +15,7 @@ class StartScreen : public Screen
     Q_OBJECT
 
 public:
-    explicit StartScreen(Global &g);
+    explicit StartScreen();
     ~StartScreen();
 
 private:

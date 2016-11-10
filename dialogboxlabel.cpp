@@ -7,7 +7,7 @@
 #include "global.h"
 #include "dialogboxlabel.h"
 
-DialogBoxLabel::DialogBoxLabel(Global &g) : QLabel(g.mainW) {
+DialogBoxLabel::DialogBoxLabel() : QLabel() {
     this->setText(QString::fromStdString(""));
     this->setGeometry(0,255,600,50);
 }

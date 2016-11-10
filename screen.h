@@ -24,16 +24,11 @@
 class Screen : public QWidget {
     Q_OBJECT
 public:
-    explicit Screen(std::string backgrndPath, std::string scrptPath, Global &g);
-    void mouseReleaseEvent(QMouseEvent *event);
-
+    explicit Screen(std::string backgrndPath, std::string scrptPath);
     bool updateFrame();
     bool isBusy();
 
 protected:
-    Global * g;
-
-    //path to the file containing the script
     Script * script;
 
     //boolean to indicate if screen should ignore user input

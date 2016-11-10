@@ -6,7 +6,7 @@
 #include "ui_forestscreen.h"
 #include "player.h"
 
-ForestScreen::ForestScreen(Global &g) : Screen(EXAMPLE_BACKGROUND, EXAMPLE_SCRIPT, g), ui(new Ui::ForestScreen){
+ForestScreen::ForestScreen() : Screen(EXAMPLE_BACKGROUND, EXAMPLE_SCRIPT), ui(new Ui::ForestScreen){
     ui->setupUi(this);
     this->updateFrame();
 

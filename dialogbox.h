@@ -14,7 +14,7 @@
 class DialogBox : public QTextEdit
 {
 public:
-    DialogBox(Global &g);
+    DialogBox();
     bool update(std::string speaker, std::string words);
     bool remove();
     void mouseReleaseEvent(QMouseEvent *event);

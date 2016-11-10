@@ -6,7 +6,7 @@
 #include "ui_battlefield.h"
 #include "tile.h"
 
-Battlefield::Battlefield(Global &g) : Screen(EXAMPLE_BATTLEFIELD_BACKGROUND, EXAMPLE_SCRIPT, g), ui(new Ui::Battlefield) {
+Battlefield::Battlefield() : Screen(EXAMPLE_BATTLEFIELD_BACKGROUND, EXAMPLE_SCRIPT), ui(new Ui::Battlefield) {
     ui->setupUi(this);
     this->setupTiles();
 }

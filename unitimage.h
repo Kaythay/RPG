@@ -15,13 +15,12 @@ class UnitImage : public QWidget
 {
     Q_OBJECT
 public:
-    explicit UnitImage(DialogConstants::sideOfScreen side, Global &g);
+    explicit UnitImage(DialogConstants::sideOfScreen side);
     void mouseReleaseEvent(QMouseEvent *event);
     bool update(std::string n, std::string e);
     bool clear();
 
 protected:
-    Global * g;
 
     //properties needed for displaying unit sprites
     QGraphicsScene * scene;

@@ -8,7 +8,7 @@
 #include "playercreatescreen.h"
 #include "ui_playercreatescreen.h"
 
-StartScreen::StartScreen(Global &g) : Screen(EXAMPLE_BACKGROUND, EXAMPLE_SCRIPT, g), ui(new Ui::StartScreen) {
+StartScreen::StartScreen() : Screen(EXAMPLE_BACKGROUND, EXAMPLE_SCRIPT), ui(new Ui::StartScreen) {
     ui->setupUi(this);
 
     //don't react to user input except for the connections listed below
@@ -24,7 +24,7 @@ StartScreen::~StartScreen() {
 
 void StartScreen::nextScreen(){
     /* set up next Screen */
-    PlayerCreateScreen * next = new PlayerCreateScreen(*(this->g));
+    PlayerCreateScreen * next = new PlayerCreateScreen();
     next->show();
     delete this;
 }

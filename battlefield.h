@@ -17,7 +17,7 @@ class Battlefield : public Screen {
     Q_OBJECT
 
 public:
-    explicit Battlefield(Global &g);
+    explicit Battlefield();
     ~Battlefield();
 
 private:

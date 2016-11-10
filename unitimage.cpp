@@ -15,12 +15,11 @@
 #define UNIT_IMAGE_PATH "C:\\Users\\Kathy\\Desktop\\RPG\\res\\img\\unit\\"
 #define BLANK_IMAGE_PATH "C:\\Users\\Kathy\\Desktop\\RPG\\res\\img\\blank.png"
 
-UnitImage::UnitImage(DialogConstants::sideOfScreen side, Global &g) : QWidget(g.mainW){
-    this->g = &g;
+UnitImage::UnitImage(DialogConstants::sideOfScreen side) : QWidget(){
     this->side = side;
 
-    this->scene = new QGraphicsScene(this->g->mainW);
-    this->view  = new QGraphicsView(this->scene, this->g->mainW);
+    this->scene = new QGraphicsScene();
+    this->view  = new QGraphicsView(this->scene);
     this->view->setFrameStyle(QFrame::NoFrame);
     this->view->setStyleSheet(QString("background-color: transparent;"));
     this->mapItem = new QGraphicsPixmapItem();

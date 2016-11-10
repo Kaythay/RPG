@@ -17,7 +17,7 @@ class PlayerCreateScreen : public Screen
     Q_OBJECT
 
 public:
-    explicit PlayerCreateScreen(Global &g);
+    explicit PlayerCreateScreen();
     ~PlayerCreateScreen();
 
     //validation functions

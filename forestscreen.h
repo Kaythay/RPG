@@ -15,7 +15,7 @@ class ForestScreen : public Screen
     Q_OBJECT
 
 public:
-    explicit ForestScreen(Global &g);
+    explicit ForestScreen();
     ~ForestScreen();
 
 private:
