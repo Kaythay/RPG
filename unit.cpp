@@ -3,7 +3,7 @@
 #include "unit.h"
 #include "item.h"
 
-Unit::Unit(std::string n, int HP, int r, int df, int at, int ch, UnitConstants::gender g){
+Unit::Unit(std::string n, int HP, int r, int df, int at, int ch, unit_constants::gender g){
     this->name = n;
     this->HP = this->totalHp = this->currentHp = HP;
     this->walkRange = r;

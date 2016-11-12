@@ -1,20 +1,18 @@
 #include <iostream>
 #include <string>
-#include <QObject>
-#include <QWidget>
-#include <QString>
 #include "global.h"
 #include "player.h"
-#include "unit.h"
-#include "dialogbox.h"
-#include "dialogboxlabel.h"
+#include "glass.h"
 
-/** NOTE: This is the class used to contain objects and other variables that should be accessible to all classes in the game */
+/** NOTE: This is the class used to contain objects
+ * and other variables that should be accessible to all classes in the game */
 
+int Global::i = 0;
+MainWindow* Global::mainWin = NULL;
+Player* Global::player = NULL;
 
-Global::Global(QObject *parent) : QObject(parent)
-{
-    this->mainW = new QWidget();
-    this->mainW->resize(600,450);
-    this->mainW->show();
+Global::Global() {
+    this->mainWin->resize(600,450);
+    this->mainWin->show();
+
 }

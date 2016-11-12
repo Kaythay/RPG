@@ -28,7 +28,7 @@ private:
     Ui::PlayerCreateScreen *ui;
 
     std::string n;               /* string used to hold the name inputted by player */
-    UnitConstants::gender gen;     /* enum used to hold the gender selected by player */
+    unit_constants::gender gen;     /* enum used to hold the gender selected by player */
 
 private slots:
     void done(); /* slot used to detect when player is is finished creating unit */

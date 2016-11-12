@@ -73,11 +73,11 @@ bool PlayerCreateScreen::isNameValid(){
  * OUTPUT= bool: true if gender is valid, false otherwise*/
 bool PlayerCreateScreen::isGenderValid(){
     if(ui->femaleRadioBtn->isChecked()) {
-        this->gen = UnitConstants::FEMALE;
+        this->gen = unit_constants::FEMALE;
         ui->genderErrorLabel->clear();
         return true;
     } else if (ui->maleRadioBtn->isChecked()){
-        this->gen = UnitConstants::MALE;
+        this->gen = unit_constants::MALE;
         ui->genderErrorLabel->clear();
         return true;
     } else {

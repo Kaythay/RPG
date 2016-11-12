@@ -8,7 +8,6 @@
 #include <QGraphicsView>
 #include <QGraphicsPixmapItem>
 #include <QPixmap>
-#include "global.h"
 #include "scriptline.h"
 
 class UnitImage : public QWidget
@@ -16,7 +15,6 @@ class UnitImage : public QWidget
     Q_OBJECT
 public:
     explicit UnitImage(DialogConstants::sideOfScreen side);
-    void mouseReleaseEvent(QMouseEvent *event);
     bool update(std::string n, std::string e);
     bool clear();
 

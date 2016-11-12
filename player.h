@@ -7,7 +7,7 @@
 class Player : public Unit
 {
 public:
-    Player(std::string n, UnitConstants::gender g);
+    Player(std::string n, unit_constants::gender g);
 };
 
 #endif // PLAYER_H

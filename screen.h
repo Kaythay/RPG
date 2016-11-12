@@ -8,7 +8,6 @@
 #include <QGraphicsView>
 #include <QGraphicsPixmapItem>
 #include <QPixmap>
-#include "global.h"
 #include "script.h"
 #include "dialogbox.h"
 #include "dialogboxlabel.h"

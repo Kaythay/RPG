@@ -13,7 +13,6 @@ StartScreen::StartScreen() : Screen(EXAMPLE_BACKGROUND, EXAMPLE_SCRIPT), ui(new 
 
     //don't react to user input except for the connections listed below
     this->busy = true;
-
     //when user hit start button, the game goes to the 'create player' Screen
     connect(ui->startButton, SIGNAL (clicked(bool)), this, SLOT (nextScreen()));
 }

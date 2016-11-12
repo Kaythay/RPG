@@ -28,13 +28,6 @@ UnitImage::UnitImage(DialogConstants::sideOfScreen side) : QWidget(){
     this->hide();
 }
 
-
-void UnitImage::mouseReleaseEvent(QMouseEvent *event){
-    event->ignore();
-    std::cout << "here uuu" << std::endl;
-    return;
-}
-
 bool UnitImage::update(std::string n, std::string e){
     std::string s = UNIT_IMAGE_PATH;
     s.append(n);

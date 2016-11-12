@@ -1,23 +1,16 @@
 #ifndef COMMON_H
 #define COMMON_H
 
-#include <QObject>
-#include <QWidget>
 #include "player.h"
 #include "glass.h"
-#include "screen.h"
 
-class Global : public QObject
-{
-    Q_OBJECT
+class Global {
 public:
-    explicit Global(QObject *parent = 0);
+    explicit Global();
     static Player * player;
-    static Glass * mainW;
+    static MainWindow * mainWin;
+    static int i;
 
-signals:
-
-public slots:
 };
 
 #endif // COMMON_H

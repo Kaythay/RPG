@@ -12,14 +12,14 @@
 #include "script.h"
 #include "unitimage.h"
 
-Screen::Screen(std::string backgrndPath, std::string scrptPath) : QWidget(){
+Screen::Screen(std::string backgrndPath, std::string scrptPath) : QWidget(Global::mainWin){
     this->busy = true;
 
     this->script = new Script(scrptPath);
     this->resize(SCREEN_X, SCREEN_Y);
 
     //set up properties needed for showing the background
-    this->backgrndScene = new QGraphicsScene();
+    this->backgrndScene = new QGraphicsScene(Global::mainWin);
     this->backgrndView  = new QGraphicsView(this->backgrndScene);
     this->backgrndMap   = new QGraphicsPixmapItem(QPixmap(QString::fromStdString(backgrndPath)));
     this->backgrndScene->addItem(this->backgrndMap);
@@ -28,6 +28,8 @@ Screen::Screen(std::string backgrndPath, std::string scrptPath) : QWidget(){
 
     this->box = new DialogBox();
     this->unitImg = new UnitImage(DialogConstants::LEFT);
+
+    this->show();
 
     this->busy = false;
 }
