@@ -16,7 +16,7 @@ Battlefield::Battlefield() : Screen(EXAMPLE_BATTLEFIELD_BACKGROUND, EXAMPLE_SCRI
 bool Battlefield::setupTiles(){
     for (int a = 0; a < (SCREEN_Y/TILE_DIMENSION); a++){
         for (int b = 0; b < (SCREEN_X/TILE_DIMENSION); b++){
-            this->tile[a][b] = new Tile(a, b, this);
+            this->tile[a][b] = new Tile(a, b);
         }
     }
     return true;

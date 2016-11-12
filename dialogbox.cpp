@@ -9,7 +9,7 @@
 #include "global.h"
 #include "dialogbox.h"
 
-DialogBox::DialogBox() : QTextEdit() {
+DialogBox::DialogBox() : QTextEdit(Global::mainWin) {
     this->setReadOnly(true);
     this->setGeometry(0,300,600,150);
     this->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
@@ -21,11 +21,6 @@ DialogBox::DialogBox() : QTextEdit() {
     this->label->hide();
 }
 
-void DialogBox::mouseReleaseEvent(QMouseEvent *event){
-    event->ignore();
-    std::cout << "here" << std::endl;
-    return;
-}
 
 bool DialogBox::update(std::string speaker, std::string words){
     this->setText(QString::fromStdString(words));

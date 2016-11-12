@@ -5,7 +5,7 @@
 #include <QString>
 #include "tile.h"
 
-Tile::Tile(int a, int b, QObject *parent) : QObject(parent){
+Tile::Tile(int a, int b) : QObject(Global::mainWin){
     this->widget = new QWidget();
 
     /* make sure the widget's geometry is a square. The function also sets the (x,y) location of the widget */

@@ -12,7 +12,4 @@ MainWindow* Global::mainWin = NULL;
 Player* Global::player = NULL;
 
 Global::Global() {
-    this->mainWin->resize(600,450);
-    this->mainWin->show();
-
 }

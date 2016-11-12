@@ -13,7 +13,7 @@ class Tile : public QObject
 {
     Q_OBJECT
 public:
-    explicit Tile(int a, int b, QObject *parent = 0);
+    explicit Tile(int a, int b);
 
 protected:
     QWidget * widget;

@@ -20,7 +20,7 @@ Screen::Screen(std::string backgrndPath, std::string scrptPath) : QWidget(Global
 
     //set up properties needed for showing the background
     this->backgrndScene = new QGraphicsScene(Global::mainWin);
-    this->backgrndView  = new QGraphicsView(this->backgrndScene);
+    this->backgrndView  = new QGraphicsView(this->backgrndScene, Global::mainWin);
     this->backgrndMap   = new QGraphicsPixmapItem(QPixmap(QString::fromStdString(backgrndPath)));
     this->backgrndScene->addItem(this->backgrndMap);
     this->backgrndView->lower();
@@ -30,6 +30,7 @@ Screen::Screen(std::string backgrndPath, std::string scrptPath) : QWidget(Global
     this->unitImg = new UnitImage(DialogConstants::LEFT);
 
     this->show();
+    std::cout << "123456" << std::endl;
 
     this->busy = false;
 }

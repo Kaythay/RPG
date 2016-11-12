@@ -17,7 +17,6 @@ public:
     DialogBox();
     bool update(std::string speaker, std::string words);
     bool remove();
-    void mouseReleaseEvent(QMouseEvent *event);
 
 protected:
     DialogBoxLabel * label;

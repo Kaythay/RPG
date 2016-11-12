@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-#include <QObject>
 #include "scriptline.h"
 
 //TODO: make exeption for whenever a file line is in the wrong format

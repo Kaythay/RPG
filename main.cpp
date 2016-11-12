@@ -11,6 +11,7 @@ int main(int argc, char **argv)
     QApplication app (argc, argv);
     QApplication::setFont(QFont("Fixedsys"));
 
+
     Global::mainWin = new MainWindow();
 
     //set up start Screen

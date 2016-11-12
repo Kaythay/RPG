@@ -15,7 +15,7 @@
 #define UNIT_IMAGE_PATH "C:\\Users\\Kathy\\Desktop\\RPG\\res\\img\\unit\\"
 #define BLANK_IMAGE_PATH "C:\\Users\\Kathy\\Desktop\\RPG\\res\\img\\blank.png"
 
-UnitImage::UnitImage(DialogConstants::sideOfScreen side) : QWidget(){
+UnitImage::UnitImage(DialogConstants::sideOfScreen side) : QWidget(Global::mainWin){
     this->side = side;
 
     this->scene = new QGraphicsScene();
