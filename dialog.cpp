@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "scriptline.h"
+#include "dialog.h"
 
 //TODO: make exeption for whenever a file line is in the wrong format
 

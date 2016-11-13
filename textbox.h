@@ -8,18 +8,19 @@
 #include <QObject>
 #include <QWidget>
 #include "global.h"
-#include "scriptline.h"
-#include "dialogboxlabel.h"
+#include "dialog.h"
+#include "textboxlabel.h"
 
-class DialogBox : public QTextEdit
+class TextBox : public QTextEdit
 {
 public:
-    DialogBox();
+    TextBox();
+    void mouseReleaseEvent(QMouseEvent *event);
     bool update(std::string speaker, std::string words);
     bool remove();
 
 protected:
-    DialogBoxLabel * label;
+    TextBoxLabel * label;
 
 };
 

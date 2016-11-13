@@ -7,10 +7,12 @@
 #include <QLabel>
 #include "global.h"
 
-class DialogBoxLabel : public QLabel
+class TextBoxLabel : public QLabel
 {
 public:
-    DialogBoxLabel();
+    TextBoxLabel();
+    void mouseReleaseEvent(QMouseEvent *event);
+
 };
 
 #endif // SPEECHBOXLABEL_H

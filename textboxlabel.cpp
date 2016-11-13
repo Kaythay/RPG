@@ -5,9 +5,14 @@
 #include <QString>
 #include <QLabel>
 #include "global.h"
-#include "dialogboxlabel.h"
+#include "textboxlabel.h"
 
-DialogBoxLabel::DialogBoxLabel() : QLabel(Global::mainWin) {
+TextBoxLabel::TextBoxLabel() : QLabel(Global::mainWin) {
     this->setText(QString::fromStdString(""));
     this->setGeometry(0,255,600,50);
+}
+
+void TextBoxLabel::mouseReleaseEvent(QMouseEvent *event){
+    event->ignore();
+    return;
 }

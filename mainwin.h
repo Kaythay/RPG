@@ -4,13 +4,13 @@
 #include <QObject>
 #include <QWidget>
 #include <QMouseEvent>
+#include "screen.h"
 
 class MainWindow : public QWidget
 {
     Q_OBJECT
 public:
     explicit MainWindow(QWidget *parent = 0);
-    void mouseReleaseEvent(QMouseEvent *event);
 
 signals:
 

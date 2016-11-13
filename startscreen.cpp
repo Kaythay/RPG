@@ -10,6 +10,7 @@
 
 StartScreen::StartScreen() : Screen(EXAMPLE_BACKGROUND, EXAMPLE_SCRIPT), ui(new Ui::StartScreen) {
     ui->setupUi(this);
+    ui->startButton->show();
 
     //don't react to user input except for the connections listed below
     this->busy = true;
@@ -23,6 +24,7 @@ StartScreen::~StartScreen() {
 
 void StartScreen::nextScreen(){
     /* set up next Screen */
+
     PlayerCreateScreen * next = new PlayerCreateScreen();
     next->show();
     delete this;
